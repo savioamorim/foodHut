@@ -1,9 +1,7 @@
 package com.cotemig.foodHut.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
 
 @Entity
 public class Loja {
@@ -14,6 +12,8 @@ public class Loja {
     private String nome;
     private String especialidade;
     private String telefone;
+    @Transient
+    private ArrayList<Produto> listProdutos;
 
     public Long getId() {
         return id;
@@ -45,5 +45,13 @@ public class Loja {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public ArrayList<Produto> getListProdutos() {
+        return listProdutos;
+    }
+
+    public void setListProdutos(ArrayList<Produto> listProdutos) {
+        this.listProdutos = listProdutos;
     }
 }
