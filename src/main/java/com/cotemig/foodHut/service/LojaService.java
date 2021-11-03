@@ -13,7 +13,7 @@ public interface LojaService {
 
     void deleteLojaById(Long id);
 
-    void updateLoja(Long id, Loja loja);
+    void updateLojaById(Long id, Loja loja);
 
     Optional<Loja> getLojaById(Long id);
 

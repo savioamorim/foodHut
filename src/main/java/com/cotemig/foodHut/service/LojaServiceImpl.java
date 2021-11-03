@@ -30,11 +30,11 @@ public class LojaServiceImpl implements LojaService {
     }
 
     @Override
-    public void updateLoja(Long id, Loja loja) {
-        Optional<Loja> optionalLoja = getLojaById(id);
-        optionalLoja.get().setNome(loja.getNome());
-        optionalLoja.get().setEspecialidade(loja.getEspecialidade());
-        optionalLoja.get().setTelefone(loja.getTelefone());
+    public void updateLojaById(Long id, Loja loja) {
+        Optional<Loja> getLoja = getLojaById(id);
+        getLoja.get().setNome(loja.getNome());
+        getLoja.get().setEspecialidade(loja.getEspecialidade());
+        getLoja.get().setTelefone(loja.getTelefone());
         lojaRepository.save(loja);
     }
 

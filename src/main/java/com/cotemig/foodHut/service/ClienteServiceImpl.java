@@ -30,7 +30,7 @@ public class ClienteServiceImpl implements ClienteService {
     }
 
     @Override
-    public void updateCliente(Long id, Cliente cliente) {
+    public void updateClienteById(Long id, Cliente cliente) {
         Optional<Cliente> optionalCliente = getClienteById(id);
         optionalCliente.get().setNome(cliente.getNome());
         optionalCliente.get().setCpf(cliente.getCpf());

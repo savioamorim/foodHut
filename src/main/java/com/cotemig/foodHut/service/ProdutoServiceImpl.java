@@ -30,7 +30,7 @@ public class ProdutoServiceImpl implements ProdutoService {
     }
 
     @Override
-    public void updateProduto(Long id, Produto produto) {
+    public void updateProdutoById(Long id, Produto produto) {
         Optional<Produto> optionalProduto = getProdutoById(id);
         optionalProduto.get().setNome(produto.getNome());
         optionalProduto.get().setCategoria(produto.getCategoria());
