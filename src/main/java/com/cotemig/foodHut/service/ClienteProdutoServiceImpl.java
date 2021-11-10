@@ -1,6 +1,6 @@
 package com.cotemig.foodHut.service;
 
-import com.cotemig.foodHut.Repository.ClienteProdutoRepository;
+import com.cotemig.foodHut.repository.ClienteProdutoRepository;
 import com.cotemig.foodHut.model.Cliente;
 import com.cotemig.foodHut.model.ClienteProduto;
 import com.cotemig.foodHut.model.Produto;
@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service("clienteProdutoService")
 public class ClienteProdutoServiceImpl implements ClienteProdutoService {
@@ -39,10 +38,10 @@ public class ClienteProdutoServiceImpl implements ClienteProdutoService {
     }
 
     @Override
-    public List<ClienteProduto> getClienteProdutoByClienteId(Cliente cliente) {
-        ArrayList<ClienteProduto> clienteProdutoList = new ArrayList<>();
-        clienteProdutoList.addAll(clienteProdutoRepository.getAllProdutoByClienteId(cliente.getId()));
-        return clienteProdutoList;
+    public List<Produto> getClienteProdutoByClienteId(Long id) {
+        ArrayList<Produto> produtoArrayList = new ArrayList<>();
+        produtoArrayList.addAll(clienteProdutoRepository.getAllProdutoByClienteId(id));
+        return produtoArrayList;
     }
 
     @Override

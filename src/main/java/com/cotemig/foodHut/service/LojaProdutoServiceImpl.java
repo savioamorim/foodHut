@@ -1,6 +1,6 @@
 package com.cotemig.foodHut.service;
 
-import com.cotemig.foodHut.Repository.LojaProdutoRepository;
+import com.cotemig.foodHut.repository.LojaProdutoRepository;
 import com.cotemig.foodHut.model.Loja;
 import com.cotemig.foodHut.model.LojaProduto;
 import com.cotemig.foodHut.model.Produto;
@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service("lojaProdutoService")
 public class LojaProdutoServiceImpl implements LojaProdutoService {

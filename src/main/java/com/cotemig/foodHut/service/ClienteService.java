@@ -15,6 +15,8 @@ public interface ClienteService {
 
     void updateClienteById(Long id, Cliente cliente);
 
+    void updateCliente(Cliente cliente);
+
     Optional<Cliente> getClienteById(Long id);
 
     List<Cliente> getAllCliente();

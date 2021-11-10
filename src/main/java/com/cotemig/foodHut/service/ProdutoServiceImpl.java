@@ -1,6 +1,6 @@
 package com.cotemig.foodHut.service;
 
-import com.cotemig.foodHut.Repository.ProdutoRepository;
+import com.cotemig.foodHut.repository.ProdutoRepository;
 import com.cotemig.foodHut.model.Produto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

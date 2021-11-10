@@ -16,7 +16,7 @@ public interface ClienteProdutoService {
 
     void deleteClienteProdutoById(Long id);
 
-    List<ClienteProduto> getClienteProdutoByClienteId(Cliente cliente);
+    List<Produto> getClienteProdutoByClienteId(Long id);
 
     List<ClienteProduto> getAllClienteProduto();
 }

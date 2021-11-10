@@ -1,4 +1,4 @@
-package com.cotemig.foodHut.Repository;
+package com.cotemig.foodHut.repository;
 
 import com.cotemig.foodHut.model.Produto;
 import org.springframework.data.jpa.repository.JpaRepository;

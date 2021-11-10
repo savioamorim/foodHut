@@ -1,6 +1,6 @@
 package com.cotemig.foodHut.service;
 
-import com.cotemig.foodHut.Repository.ClienteRepository;
+import com.cotemig.foodHut.repository.ClienteRepository;
 import com.cotemig.foodHut.model.Cliente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,6 +35,11 @@ public class ClienteServiceImpl implements ClienteService {
         optionalCliente.get().setNome(cliente.getNome());
         optionalCliente.get().setCpf(cliente.getCpf());
         optionalCliente.get().setCelular(cliente.getCelular());
+        clienteRepository.save(cliente);
+    }
+
+    @Override
+    public void updateCliente(Cliente cliente) {
         clienteRepository.save(cliente);
     }
 
