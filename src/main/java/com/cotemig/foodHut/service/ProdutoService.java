@@ -15,6 +15,8 @@ public interface ProdutoService {
 
     void updateProdutoById(Long id, Produto produto);
 
+    void updateProduto(Produto cliente);
+
     Optional<Produto> getProdutoById(Long id);
 
     List<Produto> getAllProduto();

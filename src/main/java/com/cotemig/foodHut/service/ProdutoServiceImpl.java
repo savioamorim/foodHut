@@ -39,6 +39,11 @@ public class ProdutoServiceImpl implements ProdutoService {
     }
 
     @Override
+    public void updateProduto(Produto produto) {
+        produtoRepository.save(produto);
+    }
+
+    @Override
     public Optional<Produto> getProdutoById(Long id) {
         return  produtoRepository.findById(id);
     }

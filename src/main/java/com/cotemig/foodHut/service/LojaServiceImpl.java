@@ -39,6 +39,11 @@ public class LojaServiceImpl implements LojaService {
     }
 
     @Override
+    public void updateLoja(Loja loja) {
+        lojaRepository.save(loja);
+    }
+
+    @Override
     public Optional<Loja> getLojaById(Long id) {
         return lojaRepository.findById(id);
     }

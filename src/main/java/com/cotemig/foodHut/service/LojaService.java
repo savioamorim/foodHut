@@ -15,6 +15,8 @@ public interface LojaService {
 
     void updateLojaById(Long id, Loja loja);
 
+    void updateLoja(Loja loja);
+
     Optional<Loja> getLojaById(Long id);
 
     List<Loja> getAllLoja();
