@@ -12,6 +12,10 @@ public class Produto {
     private String categoria;
     private Float valor;
 
+    @ManyToOne
+    @JoinColumn(name="loja_id", nullable=false)
+    private Loja loja;
+
     public Long getId() {
         return id;
     }
@@ -42,5 +46,13 @@ public class Produto {
 
     public void setValor(Float valor) {
         this.valor = valor;
+    }
+
+    public Loja getLoja() {
+        return loja;
+    }
+
+    public void setLoja(Loja loja) {
+        this.loja = loja;
     }
 }

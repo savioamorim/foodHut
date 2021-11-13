@@ -74,4 +74,6 @@ public class ProdutoController {
         produtoService.updateProduto(produto);
         return "redirect:/produto/index";
     }
+
+
 }

@@ -2,6 +2,7 @@ package com.cotemig.foodHut.model;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Set;
 
 @Entity
 public class Loja {
@@ -12,8 +13,10 @@ public class Loja {
     private String nome;
     private String especialidade;
     private String telefone;
+
     @Transient
-    private ArrayList<Produto> listProdutos;
+    @OneToMany(mappedBy="loja")
+    private Set<Produto> listProdutos;
 
     public Long getId() {
         return id;
@@ -47,11 +50,11 @@ public class Loja {
         this.telefone = telefone;
     }
 
-    public ArrayList<Produto> getListProdutos() {
+    public Set<Produto> getListProdutos() {
         return listProdutos;
     }
 
-    public void setListProdutos(ArrayList<Produto> listProdutos) {
+    public void setListProdutos(Set<Produto> listProdutos) {
         this.listProdutos = listProdutos;
     }
 }
