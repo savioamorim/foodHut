@@ -35,6 +35,7 @@ public class ProdutoServiceImpl implements ProdutoService {
         optionalProduto.get().setNome(produto.getNome());
         optionalProduto.get().setCategoria(produto.getCategoria());
         optionalProduto.get().setValor(produto.getValor());
+        optionalProduto.get().setLoja(produto.getLoja());
         produtoRepository.save(produto);
     }
 

@@ -51,6 +51,10 @@
     <div class="col-sm-10">
         <input type="text" class="form-control" name ="valor" th:value="${produto.valor}" id="valor_user">
     </div>
+    <label for="loja_user" class="col-sm-2 col-form-label">Loja</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" name ="valor" th:value="${produto.loja.id}" id="loja_user" readOnly="true">
+    </div>
     <br>
     <input type="submit" class="compras" value="Atualizar">
 </form>

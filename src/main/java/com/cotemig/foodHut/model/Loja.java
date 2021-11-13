@@ -1,7 +1,6 @@
 package com.cotemig.foodHut.model;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.Set;
 
 @Entity
@@ -14,7 +13,6 @@ public class Loja {
     private String especialidade;
     private String telefone;
 
-    @Transient
     @OneToMany(mappedBy="loja")
     private Set<Produto> listProdutos;
 
