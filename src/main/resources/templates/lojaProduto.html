@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Loja</title>
+    <title>Produto</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
  table, th, td {
@@ -50,19 +50,6 @@
     background-color: #fff;
     text-decoration: none;
  }
-  .visualizar {
- 	color: #FFFFFF;
-    background-color: #778899;
-    border-radius: 5px;
-    padding: 5px 10px;
-    text-decoration: none;
-    border: 1px solid #778899;
- }
- .visualizar:hover {
- 	color: #778899;
-    background-color: #FFFFFF;
-    text-decoration: none;
- }
  .compras {
     color: #fff;
     background-color: #343a40;
@@ -104,7 +91,7 @@
 </nav>
 <ul class="nav nav-tabs">
     <li class="nav-item">
-        <a class="nav-link" href="/loja/insert">Inserir Loja</a>
+        <a class="nav-link" href="/loja/index">Voltar para lojas</a>
     </li>
 </ul>
 
@@ -113,24 +100,20 @@
     <tr>
         <th>ID</th>
         <th>Nome</th>
-        <th>Especialidade</th>
-        <th>Celular</th>
+        <th>Categoria</th>
+        <th>Valor</th>
+        <th>Loja</th>
         <th>Excluir</th>
-        <th>Alterar</th>
-        <th>Visualizar Produtos</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="loja : ${lojas}">
-        <td th:text="${loja.id}"></td>
-        <td th:text="${loja.nome}"></td>
-        <td th:text="${loja.especialidade}"></td>
-        <td th:text="${loja.telefone}"></td>
-        <td><a th:href="@{/loja/delete(id=${loja.id})}" class="remover">Deletar</a></td>
-        <td><a th:href="@{/loja/update(id=${loja.id})}" class="alterar">Alterar</a></td>
-        <td><a th:href="@{/loja/produto(id=${loja.id})}" class="visualizar">Produtos</a></td>
-        <!--        <td><a th:href="@{../personaproduto/realizarcompra(id=${persona.id})}" class="adicionar">Comprar</a></td>-->
-        <!--        <td><a th:href="@{../personaproduto/buscarcompras(id=${persona.id})}" class="compras">Compras</a></td>-->
+    <tr th:each="produto : ${produtos}">
+        <td th:text="${produto.id}"></td>
+        <td th:text="${produto.nome}"></td>
+        <td th:text="${produto.categoria}"></td>
+        <td th:text="${produto.valor}"></td>
+        <td><a th:href="@{/produto/delete(id=${produto.id})}" class="remover">Deletar</a></td>
+        <td><a th:href="@{/produto/update(id=${produto.id})}" class="alterar">Alterar</a></td>
     </tr>
     </tbody>
 </table>

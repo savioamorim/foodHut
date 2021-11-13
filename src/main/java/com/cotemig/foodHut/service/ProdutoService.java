@@ -20,4 +20,6 @@ public interface ProdutoService {
     Optional<Produto> getProdutoById(Long id);
 
     List<Produto> getAllProduto();
+
+    List<Produto> getProdutoByLojaId(Long id);
 }

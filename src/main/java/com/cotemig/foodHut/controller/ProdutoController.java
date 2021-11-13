@@ -75,5 +75,11 @@ public class ProdutoController {
         return "redirect:/produto/index";
     }
 
+    @RequestMapping(value = "/loja/produto", method = RequestMethod.GET)
+    public ModelAndView visualizarProdutos(Long id) {
+        ModelAndView mv = new ModelAndView("lojaProduto");
+        mv.addObject("produtos", produtoService.getProdutoByLojaId(id));
+        return mv;
+    }
 
 }

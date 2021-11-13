@@ -43,4 +43,9 @@ public class ProdutoRestController {
     public Produto insertProduto(@RequestBody Produto produto) {
         return produtoService.insertProduto(produto);
     }
+
+    @RequestMapping(value = "/produto/loja/{id}", method = RequestMethod.GET)
+    public List<Produto> getAllProdutoByLoja(@PathVariable("id") Long id) {
+        return produtoService.getProdutoByLojaId(id);
+    }
 }

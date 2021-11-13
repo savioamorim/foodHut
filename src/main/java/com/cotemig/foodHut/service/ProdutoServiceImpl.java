@@ -52,4 +52,9 @@ public class ProdutoServiceImpl implements ProdutoService {
     public List<Produto> getAllProduto() {
         return produtoRepository.findAll();
     }
+
+    @Override
+    public List<Produto> getProdutoByLojaId(Long id) {
+        return produtoRepository.getAllProdutoByLojaId(id);
+    }
 }
