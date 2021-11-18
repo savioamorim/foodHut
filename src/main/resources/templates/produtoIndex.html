@@ -117,8 +117,7 @@
         <td th:text="${produto.loja.getNome()}"></td>
         <td><a th:href="@{/produto/delete(id=${produto.id})}" class="remover">Deletar</a></td>
         <td><a th:href="@{/produto/update(id=${produto.id})}" class="alterar">Alterar</a></td>
-        <!--        <td><a th:href="@{../personaproduto/realizarcompra(id=${persona.id})}" class="adicionar">Comprar</a></td>-->
-        <!--        <td><a th:href="@{../personaproduto/buscarcompras(id=${persona.id})}" class="compras">Compras</a></td>-->
+        <td><a th:href="@{/adicionar(id=${produto.id})}" class="compras">Adicionar no carrinho</a></td>
     </tr>
     </tbody>
 </table>

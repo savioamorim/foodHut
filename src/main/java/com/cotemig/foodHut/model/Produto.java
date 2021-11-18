@@ -1,6 +1,7 @@
 package com.cotemig.foodHut.model;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Produto {
@@ -15,6 +16,9 @@ public class Produto {
     @ManyToOne
     @JoinColumn(name="loja_id", nullable=false)
     private Loja loja;
+
+    @ManyToMany(mappedBy = "produtoSet")
+    Set<Cliente> clienteSet;
 
     public Long getId() {
         return id;

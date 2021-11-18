@@ -42,7 +42,6 @@ public class LojaController {
 
     @RequestMapping(value = "/loja/delete", method = RequestMethod.GET)
     public ModelAndView delete(Long id) {
-
         return new ModelAndView("lojaDelete", "loja", lojaService.getLojaById(id).get());
     }
 

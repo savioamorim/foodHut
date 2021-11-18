@@ -1,6 +1,7 @@
 package com.cotemig.foodHut.model;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Cliente {
@@ -11,6 +12,13 @@ public class Cliente {
     private String nome;
     private String cpf;
     private String celular;
+
+    @ManyToMany
+    @JoinTable(
+            name ="venda",
+            joinColumns = @JoinColumn(name = "cliente_id"),
+            inverseJoinColumns = @JoinColumn(name = "produto_id"))
+    Set<Produto> produtoSet;
 
     public Long getId() {
         return id;

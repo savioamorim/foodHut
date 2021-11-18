@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Cliente</title>
+    <title>Produto</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
  table, th, td {
@@ -50,19 +50,6 @@
     background-color: #fff;
     text-decoration: none;
  }
-   .visualizar {
- 	color: #FFFFFF;
-    background-color: #778899;
-    border-radius: 5px;
-    padding: 5px 10px;
-    text-decoration: none;
-    border: 1px solid #778899;
- }
- .visualizar:hover {
- 	color: #778899;
-    background-color: #FFFFFF;
-    text-decoration: none;
- }
  .compras {
     color: #fff;
     background-color: #343a40;
@@ -104,7 +91,7 @@
 </nav>
 <ul class="nav nav-tabs">
     <li class="nav-item">
-        <a class="nav-link" href="/cliente/insert">Inserir Cliente</a>
+        <a class="nav-link" href="/loja/index">Voltar para lojas</a>
     </li>
 </ul>
 
@@ -113,24 +100,18 @@
     <tr>
         <th>ID</th>
         <th>Nome</th>
-        <th>Documento</th>
-        <th>Celular</th>
-        <th>Excluir</th>
-        <th>Alterar</th>
-        <th>Comprar</th>
-        <th>Visualizar Compras</th>
+        <th>Categoria</th>
+        <th>Valor</th>
+        <th>Loja</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="cliente : ${clientes}">
-        <td th:text="${cliente.id}"></td>
-        <td th:text="${cliente.nome}"></td>
-        <td th:text="${cliente.cpf}"></td>
-        <td th:text="${cliente.celular}"></td>
-        <td><a th:href="@{/cliente/delete(id=${cliente.id})}" class="remover">Deletar</a></td>
-        <td><a th:href="@{/cliente/update(id=${cliente.id})}" class="alterar">Alterar</a></td>
-        <td><a th:href="@{/produto/index(id=${cliente.id})}" class="visualizar">Buscar Produtos</a></td>
-        <td><a th:href="@{/cliente/compras(id=${cliente.id})}" class="compras">Compras</a></td>
+    <tr th:each="produto : ${produtos}">
+        <td th:text="${produto.id}"></td>
+        <td th:text="${produto.nome}"></td>
+        <td th:text="${produto.categoria}"></td>
+        <td th:text="${produto.valor}"></td>
+        <td th:text="${produto.loja.getNome()}"></td>
     </tr>
     </tbody>
 </table>
