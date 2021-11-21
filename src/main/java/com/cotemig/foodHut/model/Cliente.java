@@ -13,13 +13,6 @@ public class Cliente {
     private String cpf;
     private String celular;
 
-    @ManyToMany
-    @JoinTable(
-            name ="venda",
-            joinColumns = @JoinColumn(name = "cliente_id"),
-            inverseJoinColumns = @JoinColumn(name = "produto_id"))
-    Set<Produto> produtoSet;
-
     public Long getId() {
         return id;
     }

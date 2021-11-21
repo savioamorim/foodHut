@@ -17,8 +17,8 @@ public class Produto {
     @JoinColumn(name="loja_id", nullable=false)
     private Loja loja;
 
-    @ManyToMany(mappedBy = "produtoSet")
-    Set<Cliente> clienteSet;
+    @Transient
+    private boolean add = true;
 
     public Long getId() {
         return id;
@@ -58,5 +58,13 @@ public class Produto {
 
     public void setLoja(Loja loja) {
         this.loja = loja;
+    }
+
+    public boolean getAdd() {
+        return add;
+    }
+
+    public void setAdd(boolean add) {
+        this.add = add;
     }
 }

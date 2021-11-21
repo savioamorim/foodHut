@@ -129,8 +129,8 @@
         <td th:text="${cliente.celular}"></td>
         <td><a th:href="@{/cliente/delete(id=${cliente.id})}" class="remover">Deletar</a></td>
         <td><a th:href="@{/cliente/update(id=${cliente.id})}" class="alterar">Alterar</a></td>
-        <td><a th:href="@{/produto/index(id=${cliente.id})}" class="visualizar">Buscar Produtos</a></td>
-        <td><a th:href="@{/cliente/compras(id=${cliente.id})}" class="compras">Compras</a></td>
+        <td><a th:href="@{../clienteproduto/realizarcompra(id=${cliente.id})}" class="adicionar">Comprar</a></td>
+        <td><a th:href="@{../clienteproduto/buscarcompras(id=${cliente.id})}" class="compras">Compras</a></td>
     </tr>
     </tbody>
 </table>
