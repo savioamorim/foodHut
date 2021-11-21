@@ -106,7 +106,7 @@
                 <td th:text="${produto.id}"></td>
                 <td th:text="${produto.nome}"></td>
                 <td th:text="${produto.valor}"></td>
-                <td><a th:href="@{../clienteproduto/insertlistaproduto(id=${produto.id}, idCliente=${cliente.id}, add=${produto.add})}" class="adicionar">Comprar</a></td>
+                <td><a th:href="@{../clienteproduto/insertlistaproduto(id=${produto.id}, idCliente=${cliente.id})}" class="adicionar">Comprar</a></td>
             </tr>
             </tbody>
         </table>

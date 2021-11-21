@@ -38,7 +38,7 @@ public class ClienteProdutoController extends BaseRestController {
         return mv;
     }
 
-    @RequestMapping(value = "/compra/insert", method = RequestMethod.POST)
+    @RequestMapping(value = "/clienteproduto/insert", method = RequestMethod.POST)
     public String submitInsert(@ModelAttribute("cliente") Cliente cliente, @ModelAttribute("listaProdutos") ArrayList<Produto> listaProduto,
                                BindingResult result, ModelMap model) {
 
@@ -47,11 +47,12 @@ public class ClienteProdutoController extends BaseRestController {
         }
 
         clienteProdutoService.insertListaProdutoCliente(getClienteEx(), (ArrayList<Produto>) getListaProduto());
+        getListaProduto().clear();
         return "redirect:/cliente/index";
     }
 
     @RequestMapping(value = "/clienteproduto/insertlistaproduto", method = RequestMethod.GET)
-    public String insertListaProduto(Integer id, boolean add) {
+    public String insertListaProduto(Long id) {
 
         Produto produtoEx = new Produto();
         for(Produto prod : getListaProdutoEx()) {
